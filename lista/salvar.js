@@ -33,4 +33,7 @@ document.body.appendChild(a);
 // Libera o objeto URL
 URL.revokeObjectURL(url);
 
+}
 
+// Evento do botão
+btnSalvar.addEventListener('click', SalvarLista);

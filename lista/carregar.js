@@ -12,5 +12,73 @@ container.appendChild(btnCarregar);
 // Input de arquivo oculto
 const inputArquivo = document.createElement('input');
 inputArquivo.type = 'file';
-inputArquivo.accept = '.txt'; // apenas
-inputArquivo.
+inputArquivo.accept = '.txt'; // apenas arquivos de textos
+inputArquivo.style.display = 'none' ;
+document.body.appendChild(inputArquivo);
+
+// Função para processar o arquivo selecionado
+function carregarListaDoArquivo(file)  {
+     const reader = new FileReader()
+     reader.onload = function () {
+          // limpa a lista atual (opcional)
+          carregarListaDoArquivo.innerHTML = '';
+
+          // Divide o conteúdo em lista e adiciona cada uma como <link
+          const linhas = reader.result.split(/\r?\n/).filter(l => l.trim() !== '');
+          linhas.forEach(linha => {
+              const li = document.createElement('li');
+              li.textContent = linha;
+              li.style.padding = '4px 0';
+
+              li.style.borderBottom = '1px solid #ccc'; // linha fina cinza
+
+              lista.appendChild(li);
+        });
+    };
+reader.readAsText(file);
+}
+
+// Eventos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

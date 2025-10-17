@@ -34,11 +34,35 @@ function carregarListaDoArquivo(file)  {
 
               lista.appendChild(li);
         });
+
     };
 reader.readAsText(file);
 }
 
-// Eventos
+// Eventos 
+btnCarregar.addEventListener('click', () => inputArquivo.click());
+inputArquivo.addEventListener('change', () => {
+      const file = inputArquivo.files[0];
+      if (file) {
+        carregarListaDoArquivo(file);
+        inputArquivo.value = ''; // permite reescolher
+        // o mesmo arquivo depois
+      }
+ });   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -4,7 +4,7 @@ container.id = 'lista-container';
 document.body.appendChild(container);
 
 // ===== Estilos direto no JS =====
-container.style.backgroundColor = '#70ecf0' // cor de fundo
+container.style.backgroundColor = '#657061' // cor de fundo
 container.style.border = '2px solid #ccc';  // borda
 container.style.borderRadius = '40px';      // cantos arredondados
 container.style.padding = '20px';           // epaçamento interno
@@ -29,8 +29,8 @@ container.appendChild(inputItem);
 // Cria botão de adicionar
 const btnAdd = document.createElement('button');
 btnAdd.textContent = 'Adicionar';
-btnAdd.style.fontSize = '20px';
-container.appendChild(btnAdd);
+
+
 
 // Cria Lista
 const lista = document.createElement('ul');

@@ -28,7 +28,8 @@ const a = document.creatElemente('a');
 a.href = url;
 a.download = 'Lista.txt'; // nome do arquivo
 a.click(); // dispara o download
-document.body.appendChild(a);
+document.body.ap
+pendChild(a);
 
 // Libera o objeto URL
 URL.revokeObjectURL(url);

@@ -1,9 +1,8 @@
-// Cria uma div "container" e adiciona ao body
+// ===== Container ======
 const container = document.createElement('div');
 container.id = 'lista-container';
 document.body.appendChild(container);
 
-// ===== Estilos direto no JS =====
 container.style.backgroundColor = '#657061' // cor de fundo
 container.style.border = '2px solid #ccc';  // borda
 container.style.borderRadius = '40px';      // cantos arredondados
@@ -56,4 +55,25 @@ inputItem.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         adicionarItem();
     }
-});
+
+
+// ===== Função criar item com lixeira cinza =====
+function CriarItemComLixeira(texto) {
+const li = document.createElement('li');
+li.style.position = 'relative';
+li.style.paddingRight = '30px';
+li.style.paddingTop = '4px';
+li.style.paddingBottom = '4px';
+li.style.borderBottom = '1px solid #ccc';
+
+// Texto do item
+const spanTexto = document.createElement('span');
+spanTexto.textContent = texto;
+li.appendChild(spanTexto);
+
+// Ícone de lixeira
+const btnExcluir = document.createElement('span');
+btnExcluir.textContent = '🗑️';
+btnExcluir.style.position = 'absolute';
+
+
